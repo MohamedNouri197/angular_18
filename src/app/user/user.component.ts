@@ -20,16 +20,16 @@ export class UserComponent {
   @Input() name!: string;
   @Input() id!: string;
   @Output() select = new EventEmitter();
-  /*   avatar = input<string>();
-  name = input<string>();
- */
-  getImagePath = computed(() => {
-    'assets/users/users/' + this.avatar;
-  });
+    /* avatar = input<string>();
+  name = input<string>(); */
 
-  /* getImagePath() {
-    return 'assets/users/users/' + this.avatar();
-  } */
+ /*  getImagePath = computed(() => {
+    'assets/users/users/' + this.avatar;
+  }); */
+
+  getImagePath() {
+    return 'assets/users/users/' + this.avatar;
+  }
   onSelectUser() {
     this.select.emit(this.id);
   }
